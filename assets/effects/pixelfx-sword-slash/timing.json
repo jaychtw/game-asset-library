@@ -1,0 +1,394 @@
+{
+  "schemaVersion": 1,
+  "id": "pixelfx-sword-slash",
+  "generator": {
+    "node": "24.22.1",
+    "command": "npm run assets"
+  },
+  "image": "sprites.png",
+  "origin": {
+    "repo": "patch-gg/pixelfx",
+    "commit": "a84159688af3ca37a4be05a0d422b94451b2e24e",
+    "path": "src/fx/melee/sword-slash.js"
+  },
+  "fps": 30,
+  "loop": false,
+  "durationMs": 800,
+  "effectDurationMs": 750,
+  "size": [
+    680,
+    520
+  ],
+  "frameSize": [
+    136,
+    104
+  ],
+  "pivot": [
+    44,
+    92
+  ],
+  "coordinates": "pixels; x right, y down; pivot relative to frame top-left",
+  "options": {
+    "palette": [
+      "#212f6b",
+      "#2c58aa",
+      "#3a8bd8",
+      "#62c8f4",
+      "#b8c9e8",
+      "#e8f1ff",
+      "#ffffff"
+    ],
+    "sparks": [
+      "#fff3a6",
+      "#ffe26b",
+      "#ff8a2a",
+      "#f2561d"
+    ],
+    "radius": 42,
+    "seed": 2
+  },
+  "frames": [
+    {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 136,
+        "h": 104
+      },
+      "timeMs": 0,
+      "durationMs": 33.333333333333336,
+      "pivot": [
+        44,
+        92
+      ]
+    },
+    {
+      "frame": {
+        "x": 136,
+        "y": 0,
+        "w": 136,
+        "h": 104
+      },
+      "timeMs": 33.333333333333336,
+      "durationMs": 33.333333333333336,
+      "pivot": [
+        44,
+        92
+      ]
+    },
+    {
+      "frame": {
+        "x": 272,
+        "y": 0,
+        "w": 136,
+        "h": 104
+      },
+      "timeMs": 66.66666666666667,
+      "durationMs": 33.333333333333336,
+      "pivot": [
+        44,
+        92
+      ]
+    },
+    {
+      "frame": {
+        "x": 408,
+        "y": 0,
+        "w": 136,
+        "h": 104
+      },
+      "timeMs": 100,
+      "durationMs": 33.333333333333336,
+      "pivot": [
+        44,
+        92
+      ]
+    },
+    {
+      "frame": {
+        "x": 544,
+        "y": 0,
+        "w": 136,
+        "h": 104
+      },
+      "timeMs": 133.33333333333334,
+      "durationMs": 33.333333333333336,
+      "pivot": [
+        44,
+        92
+      ]
+    },
+    {
+      "frame": {
+        "x": 0,
+        "y": 104,
+        "w": 136,
+        "h": 104
+      },
+      "timeMs": 166.66666666666666,
+      "durationMs": 33.333333333333336,
+      "pivot": [
+        44,
+        92
+      ]
+    },
+    {
+      "frame": {
+        "x": 136,
+        "y": 104,
+        "w": 136,
+        "h": 104
+      },
+      "timeMs": 200,
+      "durationMs": 33.333333333333336,
+      "pivot": [
+        44,
+        92
+      ]
+    },
+    {
+      "frame": {
+        "x": 272,
+        "y": 104,
+        "w": 136,
+        "h": 104
+      },
+      "timeMs": 233.33333333333334,
+      "durationMs": 33.333333333333336,
+      "pivot": [
+        44,
+        92
+      ]
+    },
+    {
+      "frame": {
+        "x": 408,
+        "y": 104,
+        "w": 136,
+        "h": 104
+      },
+      "timeMs": 266.6666666666667,
+      "durationMs": 33.333333333333336,
+      "pivot": [
+        44,
+        92
+      ]
+    },
+    {
+      "frame": {
+        "x": 544,
+        "y": 104,
+        "w": 136,
+        "h": 104
+      },
+      "timeMs": 300,
+      "durationMs": 33.333333333333336,
+      "pivot": [
+        44,
+        92
+      ]
+    },
+    {
+      "frame": {
+        "x": 0,
+        "y": 208,
+        "w": 136,
+        "h": 104
+      },
+      "timeMs": 333.3333333333333,
+      "durationMs": 33.333333333333336,
+      "pivot": [
+        44,
+        92
+      ]
+    },
+    {
+      "frame": {
+        "x": 136,
+        "y": 208,
+        "w": 136,
+        "h": 104
+      },
+      "timeMs": 366.6666666666667,
+      "durationMs": 33.333333333333336,
+      "pivot": [
+        44,
+        92
+      ]
+    },
+    {
+      "frame": {
+        "x": 272,
+        "y": 208,
+        "w": 136,
+        "h": 104
+      },
+      "timeMs": 400,
+      "durationMs": 33.333333333333336,
+      "pivot": [
+        44,
+        92
+      ]
+    },
+    {
+      "frame": {
+        "x": 408,
+        "y": 208,
+        "w": 136,
+        "h": 104
+      },
+      "timeMs": 433.3333333333333,
+      "durationMs": 33.333333333333336,
+      "pivot": [
+        44,
+        92
+      ]
+    },
+    {
+      "frame": {
+        "x": 544,
+        "y": 208,
+        "w": 136,
+        "h": 104
+      },
+      "timeMs": 466.6666666666667,
+      "durationMs": 33.333333333333336,
+      "pivot": [
+        44,
+        92
+      ]
+    },
+    {
+      "frame": {
+        "x": 0,
+        "y": 312,
+        "w": 136,
+        "h": 104
+      },
+      "timeMs": 500,
+      "durationMs": 33.333333333333336,
+      "pivot": [
+        44,
+        92
+      ]
+    },
+    {
+      "frame": {
+        "x": 136,
+        "y": 312,
+        "w": 136,
+        "h": 104
+      },
+      "timeMs": 533.3333333333334,
+      "durationMs": 33.333333333333336,
+      "pivot": [
+        44,
+        92
+      ]
+    },
+    {
+      "frame": {
+        "x": 272,
+        "y": 312,
+        "w": 136,
+        "h": 104
+      },
+      "timeMs": 566.6666666666666,
+      "durationMs": 33.333333333333336,
+      "pivot": [
+        44,
+        92
+      ]
+    },
+    {
+      "frame": {
+        "x": 408,
+        "y": 312,
+        "w": 136,
+        "h": 104
+      },
+      "timeMs": 600,
+      "durationMs": 33.333333333333336,
+      "pivot": [
+        44,
+        92
+      ]
+    },
+    {
+      "frame": {
+        "x": 544,
+        "y": 312,
+        "w": 136,
+        "h": 104
+      },
+      "timeMs": 633.3333333333334,
+      "durationMs": 33.333333333333336,
+      "pivot": [
+        44,
+        92
+      ]
+    },
+    {
+      "frame": {
+        "x": 0,
+        "y": 416,
+        "w": 136,
+        "h": 104
+      },
+      "timeMs": 666.6666666666666,
+      "durationMs": 33.333333333333336,
+      "pivot": [
+        44,
+        92
+      ]
+    },
+    {
+      "frame": {
+        "x": 136,
+        "y": 416,
+        "w": 136,
+        "h": 104
+      },
+      "timeMs": 700,
+      "durationMs": 33.333333333333336,
+      "pivot": [
+        44,
+        92
+      ]
+    },
+    {
+      "frame": {
+        "x": 272,
+        "y": 416,
+        "w": 136,
+        "h": 104
+      },
+      "timeMs": 733.3333333333334,
+      "durationMs": 33.333333333333336,
+      "pivot": [
+        44,
+        92
+      ]
+    },
+    {
+      "frame": {
+        "x": 408,
+        "y": 416,
+        "w": 136,
+        "h": 104
+      },
+      "timeMs": 766.6666666666666,
+      "durationMs": 33.333333333333336,
+      "pivot": [
+        44,
+        92
+      ]
+    }
+  ],
+  "license": "MIT",
+  "notices": [
+    "LICENSE",
+    "NOTICE.md"
+  ],
+  "rendering": "Upstream renderFrames with transparent RGBA and upstream edge fade; no actor stand-in. Includes terminal frame for one-shots."
+}

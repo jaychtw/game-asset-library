@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 1,
+  "id": "pixelfx-ice-shatter",
+  "name": "Ice shatter",
+  "type": "effect",
+  "localized": {
+    "en": {
+      "name": "Ice shatter",
+      "description": "A block of ice takes a hit from the left: it jolts, cracks race over its faces, it flashes white and bursts into chunks that tumble, bounce and skid off in a roll of ice dust."
+    },
+    "zh-TW": {
+      "name": "冰塊碎裂",
+      "description": "冰塊受擊後裂開，碎片翻滾、彈跳並化為冰塵。"
+    }
+  },
+  "description": "A block of ice takes a hit from the left: it jolts, cracks race over its faces, it flashes white and bursts into chunks that tumble, bounce and skid off in a roll of ice dust.",
+  "tags": {
+    "roles": [
+      "vfx",
+      "ice"
+    ],
+    "styles": [
+      "pixel-art",
+      "procedural"
+    ],
+    "views": [
+      "side"
+    ],
+    "features": [
+      "ice",
+      "shatter",
+      "break",
+      "destroy",
+      "impact",
+      "directional",
+      "one-shot",
+      "animated",
+      "transparent"
+    ],
+    "formats": [
+      "js",
+      "png",
+      "json"
+    ]
+  },
+  "status": {
+    "creative": "candidate",
+    "integration": "demo-verified",
+    "rights": "verified-open"
+  },
+  "approval": {
+    "scope": "Library v1 technical import; no asset creative freeze",
+    "evidence": "docs/FINAL-GDD.md",
+    "crossProjectApproval": false
+  },
+  "origin": {
+    "repo": "patch-gg/pixelfx",
+    "author": "Patch; Hugo Duprez; third-party contributors per NOTICE",
+    "referenceCommit": "a84159688af3ca37a4be05a0d422b94451b2e24e",
+    "path": "src/fx/ice/ice-shatter.js",
+    "editableSourceUrl": "https://github.com/patch-gg/pixelfx/blob/a84159688af3ca37a4be05a0d422b94451b2e24e/src/fx/ice/ice-shatter.js"
+  },
+  "rights": {
+    "license": "MIT",
+    "reuse": "Reuse and adapt with MIT copyright/license and applicable NOTICE preserved.",
+    "publicDistribution": true,
+    "notices": [
+      "vendor/pixelfx/LICENSE",
+      "vendor/pixelfx/NOTICE.md"
+    ]
+  },
+  "files": {
+    "runtime": [],
+    "metadata": [
+      "timing.json"
+    ],
+    "preview": null,
+    "exports": [
+      "sprites.png",
+      "timing.json"
+    ]
+  },
+  "capabilities": {
+    "adapter": "pixelfx",
+    "effect": "ice/ice-shatter",
+    "preview": true,
+    "sourceDownload": true,
+    "spriteExport": true,
+    "controls": [
+      "play",
+      "replay",
+      "speed",
+      "background",
+      "palette",
+      "seed",
+      "mirror"
+    ]
+  },
+  "integration": {
+    "entryPoint": "vendor/pixelfx/src/fx/ice/ice-shatter.js",
+    "framePixels": [
+      224,
+      112
+    ],
+    "pivot": [
+      68,
+      90
+    ],
+    "duration": 2.8,
+    "fps": 30,
+    "loop": false,
+    "coordinates": "pixels, x right, y down; seconds",
+    "allowed": [
+      "MIT permits modification and reuse with notices"
+    ],
+    "needsReview": [
+      "Creative suitability and target-game integration"
+    ],
+    "instructions": "Import createFx/createFrame/clearFrame/composite from vendor/pixelfx/src/core/index.js and this effect module. createFx(module, {x: 68, y: 90}); update at 1/30 seconds, clearFrame, draw, composite to RGBA. Preserve LICENSE and NOTICE. Pin the library commit; do not auto-update."
+  },
+  "dependencies": [
+    "vendor/pixelfx/provenance.json"
+  ],
+  "limits": [
+    "No independent target-game integration verified",
+    "Default sprite exports do not include preview customizations",
+    "Additive glow is encoded as RGBA; looks most faithful on dark backgrounds"
+  ],
+  "checksums": {
+    "sprites.png": "65c04c3c22cc53df48a205ee4d8422aa0e6840df52ec22c631fcb08b39935857",
+    "timing.json": "36e668f004b76d52edbb928ca96c8bd09836d4e43ca8e24d4c6d071dad8e3bdf",
+    "README.md": "6816f1892e4f0c5b0188326a4ec1970f0623e1b64405f2be2922d2f7a1f3ff53"
+  }
+}

@@ -2,6 +2,167 @@
   "schemaVersion": 1,
   "entries": [
     {
+      "id": "pixelfx-energy-core",
+      "name": "Energy core",
+      "type": "effect",
+      "tags": {
+        "roles": [
+          "vfx",
+          "scifi"
+        ],
+        "styles": [
+          "pixel-art",
+          "procedural"
+        ],
+        "views": [
+          "side"
+        ],
+        "features": [
+          "scifi",
+          "reactor",
+          "core",
+          "power",
+          "plasma",
+          "machine",
+          "prop",
+          "ground",
+          "loop",
+          "animated",
+          "transparent"
+        ],
+        "formats": [
+          "js",
+          "png",
+          "json"
+        ]
+      },
+      "status": {
+        "creative": "candidate",
+        "integration": "demo-verified",
+        "rights": "verified-open"
+      },
+      "manifest": "assets/effects/pixelfx-energy-core/asset.json"
+    },
+    {
+      "id": "pixelfx-ice-shatter",
+      "name": "Ice shatter",
+      "type": "effect",
+      "tags": {
+        "roles": [
+          "vfx",
+          "ice"
+        ],
+        "styles": [
+          "pixel-art",
+          "procedural"
+        ],
+        "views": [
+          "side"
+        ],
+        "features": [
+          "ice",
+          "shatter",
+          "break",
+          "destroy",
+          "impact",
+          "directional",
+          "one-shot",
+          "animated",
+          "transparent"
+        ],
+        "formats": [
+          "js",
+          "png",
+          "json"
+        ]
+      },
+      "status": {
+        "creative": "candidate",
+        "integration": "demo-verified",
+        "rights": "verified-open"
+      },
+      "manifest": "assets/effects/pixelfx-ice-shatter/asset.json"
+    },
+    {
+      "id": "pixelfx-sword-slash",
+      "name": "Sword slash",
+      "type": "effect",
+      "tags": {
+        "roles": [
+          "vfx",
+          "melee"
+        ],
+        "styles": [
+          "pixel-art",
+          "procedural"
+        ],
+        "views": [
+          "side"
+        ],
+        "features": [
+          "melee",
+          "slash",
+          "sword",
+          "combat",
+          "directional",
+          "one-shot",
+          "animated",
+          "transparent"
+        ],
+        "formats": [
+          "js",
+          "png",
+          "json"
+        ]
+      },
+      "status": {
+        "creative": "candidate",
+        "integration": "demo-verified",
+        "rights": "verified-open"
+      },
+      "manifest": "assets/effects/pixelfx-sword-slash/asset.json"
+    },
+    {
+      "id": "pixelfx-torch",
+      "name": "Torch",
+      "type": "effect",
+      "tags": {
+        "roles": [
+          "vfx",
+          "fire"
+        ],
+        "styles": [
+          "pixel-art",
+          "procedural"
+        ],
+        "views": [
+          "side"
+        ],
+        "features": [
+          "fire",
+          "torch",
+          "prop",
+          "light",
+          "wall",
+          "dungeon",
+          "loop",
+          "animated",
+          "transparent"
+        ],
+        "formats": [
+          "js",
+          "png",
+          "json"
+        ]
+      },
+      "status": {
+        "creative": "candidate",
+        "integration": "demo-verified",
+        "rights": "verified-open"
+      },
+      "manifest": "assets/effects/pixelfx-torch/asset.json"
+    },
+    {
       "id": "armorheart-battleship",
       "name": "Armorheart Battleship",
       "type": "vehicle",

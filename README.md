@@ -1,29 +1,38 @@
-# Game Asset Library
+# Game Asset Library v1.0
 
-A small, demand-driven catalog of **real working visual components** for game development. The purpose is to resolve important artistic decisions **before FINAL GDD Freeze**, not to build an enormous asset collection.
+A small source-first catalog of real working visual components for game development, with a bilingual dark gallery, live pixel effects, reversible controls and rights-aware downloads.
 
-## For creators and AI agents
+**Public gallery:** https://jaychtw.github.io/game-asset-library/
 
-1. Discuss the art-critical character or object in depth; establish silhouette, pose, palette, animation, perspective, and the intended constraints. Don't force this depth on incidental decorations.
-2. Produce a **runnable, inspectable asset**, not just a concept image or a descriptive prompt. Preserve real source/rig/spritesheets and previews.
-3. Record the exact creative acceptance scope; **Asset Freeze** is a specific source revision and usable behavior. Mark candidates honestly.
-4. Catalog by **type, role, style, view, feature, and format**. Preserve source, rights, hashes, and integration guidance.
-5. In the FINAL GDD reference an **immutable library commit and asset ID**, along with the chosen export and permitted adaptations. Codex imports/adjusts and tests the asset rather than inventing its critical visual identity.
+## Develop and verify
 
-## Links
+Node.js **24.22.1** (see .node-version) and Python 3; no production dependencies, API, CDN or server backend. QA dependencies are pinned in package-lock.json.
 
-- [Catalog and tags](catalog/README.md) · [JSON index](catalog/index.json)
-- [First imported sample: Armorheart battleship](assets/vehicles/armorheart-battleship/README.md)
-- [Character creation template](templates/CHARACTER-DESIGN.md)
-- [Machine-readable entry example](templates/ASSET-MANIFEST.example.json)
-- [Asset packaging and status contract](docs/ASSET-CONTRACT.md)
+```sh
+npm ci
+npm run assets      # deterministic exports from the four pinned PixelFX sources
+npm run catalog     # discover assets/**/asset.json
+npm run build       # validate + static gallery in dist/
+npm test            # integrity, safety, exact exported-frame fidelity
+npm run serve       # local static server; separate terminal for browser QA
+npm run test:browser
+```
 
-### First test import
+Browser QA uses `/usr/bin/chromium`, or set `CHROMIUM_PATH` to an installed Chrome/Chromium executable. It exercises EN/zh-TW, keyboard/touch emulation, responsive visuals, axe accessibility, animation/motion, download failures/recovery, and a disposable E01 asset followed by cleanup. Evidence is under [docs/evidence](docs/evidence/). For a deployed-site run set `GAL_BASE_URL` to the approved gallery URL; E01 runs only locally. No physical-device or human aesthetic approval is implied.
 
-The battleship was **creatively accepted for Armorheart Interception M3**. Its original runtime PNG is copied byte-for-byte; the unusually large editable SVG remains accessible by exact GitHub source link. This is a functional retrieval/catalog example, **not** blanket approval or licensing for other games. Read the entry's rights and limitations before reuse.
+## Initial collection and rights
 
-## Validate
+- `pixelfx-torch`, `pixelfx-ice-shatter`, `pixelfx-sword-slash`, `pixelfx-energy-core`: exact selected [PixelFX](https://github.com/patch-gg/pixelfx) sources at `a84159688af3ca37a4be05a0d422b94451b2e24e`, MIT. Loops and one-shots run locally. Source and default sprite ZIPs preserve LICENSE/NOTICE, hashes, origin and timing/pivot metadata. Patch Pixel's excluded gallery font is **not included**; the UI uses system fonts. Upstream's MIT bitmap glyph code is part of its core runtime, not that gallery font.
+- `armorheart-battleship`: preserved migration sample accepted for Armorheart Interception M3; cross-project rights are **unverified**. The gallery shows metadata only, with no image or downloads. Original tracked files, origin/anchors/hash and acceptance scope remain unchanged. Public source links do not grant reuse rights.
 
-Requires only Node 20+, no npm dependencies: `node scripts/validate.mjs`. No website, storage service, paid API, CI or GitHub Pages deployment is required for v0.
+**This repository is not generally MIT-licensed.** Each asset's manifest and source licenses control its reuse. The four imports are creative candidates with demo verification, not owner-frozen assets or independently tested cross-project integrations.
 
-**This repository is not generally MIT-licensed.** Source projects, external reference art, generated assets and derivatives can have different rights. Each asset's manifest controls what is actually known. Existing projects and the shared [AICP/UGDS standards](https://github.com/jaychtw/game-development-standards) are unchanged.
+## Add or consume an asset
+
+The canonical inventory is [catalog/index.json](catalog/index.json) plus package manifests, never HTML cards. Add a package and regenerate/build; categories, search and inspection derive from data. New executable formats need a bounded vetted adapter. Future assets need their own freeze and publication authorization: read [New Asset Creation Contract](docs/NEW-ASSET-CREATION-CONTRACT.md), [manifest/packaging contract](docs/ASSET-CONTRACT.md), and [character design guide](templates/CHARACTER-DESIGN.md).
+
+Consumers pin the immutable library commit, asset ID and export/entry point in their FINAL GDD. Preserve exact source and notices; never silently auto-update a consuming game's pinned art or infer approval from tags.
+
+## Release
+
+[FINAL GDD](docs/FINAL-GDD.md) and [one-shot brief](docs/CODEX-ONE-SHOT.md) remain the frozen authority. [Release evidence](docs/RELEASE.md) distinguishes local QA, Git/PR, CI and live publication. Main deploys through the SHA-pinned [Pages workflow](.github/workflows/pages.yml) only after integrity/build/browser/E01 checks succeed. Public-repository standard GitHub-hosted runners and Pages stay within the $0 contract; no paid settings or alternative hosts are configured. Possibility and other project repositories are outside this release.

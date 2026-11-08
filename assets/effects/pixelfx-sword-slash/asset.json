@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 1,
+  "id": "pixelfx-sword-slash",
+  "name": "Sword slash",
+  "type": "effect",
+  "localized": {
+    "en": {
+      "name": "Sword slash",
+      "description": "A tilted crescent whips round in two frames, cools from white to deep blue as it trails off, glints at the tip and throws sparks."
+    },
+    "zh-TW": {
+      "name": "劍刃揮斬",
+      "description": "明亮的弧形劍光、殘影與撞擊火花。"
+    }
+  },
+  "description": "A tilted crescent whips round in two frames, cools from white to deep blue as it trails off, glints at the tip and throws sparks.",
+  "tags": {
+    "roles": [
+      "vfx",
+      "melee"
+    ],
+    "styles": [
+      "pixel-art",
+      "procedural"
+    ],
+    "views": [
+      "side"
+    ],
+    "features": [
+      "melee",
+      "slash",
+      "sword",
+      "combat",
+      "directional",
+      "one-shot",
+      "animated",
+      "transparent"
+    ],
+    "formats": [
+      "js",
+      "png",
+      "json"
+    ]
+  },
+  "status": {
+    "creative": "candidate",
+    "integration": "demo-verified",
+    "rights": "verified-open"
+  },
+  "approval": {
+    "scope": "Library v1 technical import; no asset creative freeze",
+    "evidence": "docs/FINAL-GDD.md",
+    "crossProjectApproval": false
+  },
+  "origin": {
+    "repo": "patch-gg/pixelfx",
+    "author": "Patch; Hugo Duprez; third-party contributors per NOTICE",
+    "referenceCommit": "a84159688af3ca37a4be05a0d422b94451b2e24e",
+    "path": "src/fx/melee/sword-slash.js",
+    "editableSourceUrl": "https://github.com/patch-gg/pixelfx/blob/a84159688af3ca37a4be05a0d422b94451b2e24e/src/fx/melee/sword-slash.js"
+  },
+  "rights": {
+    "license": "MIT",
+    "reuse": "Reuse and adapt with MIT copyright/license and applicable NOTICE preserved.",
+    "publicDistribution": true,
+    "notices": [
+      "vendor/pixelfx/LICENSE",
+      "vendor/pixelfx/NOTICE.md"
+    ]
+  },
+  "files": {
+    "runtime": [],
+    "metadata": [
+      "timing.json"
+    ],
+    "preview": null,
+    "exports": [
+      "sprites.png",
+      "timing.json"
+    ]
+  },
+  "capabilities": {
+    "adapter": "pixelfx",
+    "effect": "melee/sword-slash",
+    "preview": true,
+    "sourceDownload": true,
+    "spriteExport": true,
+    "controls": [
+      "play",
+      "replay",
+      "speed",
+      "background",
+      "palette",
+      "seed",
+      "mirror"
+    ]
+  },
+  "integration": {
+    "entryPoint": "vendor/pixelfx/src/fx/melee/sword-slash.js",
+    "framePixels": [
+      136,
+      104
+    ],
+    "pivot": [
+      44,
+      92
+    ],
+    "duration": 0.75,
+    "fps": 30,
+    "loop": false,
+    "coordinates": "pixels, x right, y down; seconds",
+    "allowed": [
+      "MIT permits modification and reuse with notices"
+    ],
+    "needsReview": [
+      "Creative suitability and target-game integration"
+    ],
+    "instructions": "Import createFx/createFrame/clearFrame/composite from vendor/pixelfx/src/core/index.js and this effect module. createFx(module, {x: 44, y: 92}); update at 1/30 seconds, clearFrame, draw, composite to RGBA. Preserve LICENSE and NOTICE. Pin the library commit; do not auto-update."
+  },
+  "dependencies": [
+    "vendor/pixelfx/provenance.json"
+  ],
+  "limits": [
+    "No independent target-game integration verified",
+    "Default sprite exports do not include preview customizations",
+    "Additive glow is encoded as RGBA; looks most faithful on dark backgrounds"
+  ],
+  "checksums": {
+    "sprites.png": "04bd1c31eeae6fdbd0cdd4cc3c883b4763d7cacab86072e64d145403dff66351",
+    "timing.json": "aaead1e92e9263b696db14b048e1da01fb0f84a1ab3b54abcb44248d66e4d056",
+    "README.md": "fe35b60171d1fd4b7ad01eda04d95d0abc7af64dbf9c08cf015aa21afdc2ccae"
+  }
+}
