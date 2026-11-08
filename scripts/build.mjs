@@ -10,9 +10,11 @@ const entries=[];
 for(const e of c.entries){const a=json(e.manifest),folder=dirname(e.manifest);a.packagePath=folder;
  // Only verified-open resources enter the public build. Existing restricted source remains unchanged in Git.
  if(a.status.rights==='verified-open'&&a.rights.publicDistribution){cpSync(join(root,folder),join(root,'dist',folder),{recursive:true});
- const spec={root,folder,id:a.id,effect:a.capabilities?.effect};
+ if(a.capabilities?.sourceDownload||a.capabilities?.spriteExport){
+ const spec={root,folder,id:a.id,effect:a.capabilities?.effect,notices:a.rights.notices??[]};
  execFileSync('python3',['scripts/package.py',JSON.stringify(spec)],{cwd:root});
  a.downloads={source:`downloads/${a.id}-source.zip`,...(a.capabilities?.spriteExport?{sprites:`downloads/${a.id}-sprites.zip`}:{})};
+ }
  }
  if(a.downloads) for(const [kind,url]of Object.entries(a.downloads))a.downloads[kind]={url,sha256:sha(readFileSync(join(root,'dist',url)))};
  entries.push(a);}

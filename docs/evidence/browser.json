@@ -1,0 +1,36 @@
+{
+  "base": "http://127.0.0.1:8000/",
+  "checks": {
+    "G01 search/category/empty/reset": "PASS",
+    "G02 battleship rights and focus": "PASS",
+    "G03 reversible controls; G05 bilingual state and download": "PASS",
+    "G03 one-shot replay/end": "PASS",
+    "G03 offscreen/reduced motion": "PASS",
+    "G04 browser pixels match pinned renderer/export at recorded frame": "PASS",
+    "G09 keyboard and accessibility": "PASS",
+    "G08 preview/source/download/catalog failure and recovery": "PASS",
+    "G08 invalid metadata isolated": "PASS",
+    "G09 touch and narrow layout": "PASS",
+    "G07/E01 package → catalog → build → new type/search/inspector": "PASS",
+    "Privacy: no runtime external requests": "PASS"
+  },
+  "accessibility": [
+    {
+      "label": "wide gallery",
+      "violations": []
+    },
+    {
+      "label": "zh-TW inspector",
+      "violations": []
+    },
+    {
+      "label": "narrow and wide modal labels",
+      "violations": []
+    },
+    {
+      "label": "mobile zh-TW inspector",
+      "violations": []
+    }
+  ],
+  "errors": []
+}

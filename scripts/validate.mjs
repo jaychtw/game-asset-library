@@ -17,10 +17,12 @@ export function validateManifest(a,manifest){
  const folder=dirname(manifest);
  for(const p of [...(a.files?.runtime??[]),...(a.files?.metadata??[]),...(a.files?.exports??[]),a.files?.preview].filter(Boolean)){assert(safePath(p),'Unsafe asset path');file(join(folder,p));}
  for(const [p,hash]of Object.entries(a.checksums??{})){assert(safePath(p),'Unsafe checksum path');assert(/^[a-f0-9]{64}$/.test(hash)&&sha(readFileSync(file(join(folder,p))))===hash,'Checksum '+p);}
- if(a.parent){assert(/^[a-z0-9-]+$/.test(a.parent.id)&&a.parent.id!==a.id,'Parent identity');assert(/^[a-f0-9]{40}$/.test(a.parent.revision),'Parent revision');}
+ if(a.parent){assert(/^[a-z0-9-]+$/.test(a.parent.id)&&a.parent.id!==a.id,'Parent identity');assert(/^[a-f0-9]{40}$/.test(a.parent.revision),'Parent revision');assert(typeof a.parent.summary==='string'&&a.parent.summary.trim(),'Derivative summary');}
+ for(const notice of a.rights?.notices??[])file(notice);
  const c=a.capabilities;
  if(c){assert(['pixelfx','image','metadata'].includes(c.adapter),'Unsupported adapter');if(c.sourceDownload||c.spriteExport||c.preview)assert(a.status.rights==='verified-open'&&a.rights.publicDistribution===true,'Distribution gate');
  if(c.adapter==='pixelfx'){assert(['fire/torch','ice/ice-shatter','melee/sword-slash','scifi/energy-core'].includes(c.effect),'Unvetted executable effect');assert(a.origin.referenceCommit==='a84159688af3ca37a4be05a0d422b94451b2e24e','Effect pin');}
+ if(c.sourceDownload)assert(a.rights.license&&a.rights.notices?.length,'Source download license/notices');
  if(c.adapter==='image'&&c.preview){assert(safePath(c.image)&&/\.(png|webp|jpg)$/.test(c.image),'Image preview');file(join(folder,c.image));}
  if(c.spriteExport)for(const p of ['sprites.png','timing.json'])assert(a.checksums?.[p],'Export checksum');
  }

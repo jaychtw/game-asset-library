@@ -6,7 +6,7 @@ def archive(suffix,files):
   for name,path in sorted(files.items()):
    info=zipfile.ZipInfo(name,date_time=(2026,1,1,0,0,0));info.compress_type=zipfile.ZIP_DEFLATED
    z.writestr(info,path.read_bytes())
-terms={p:v/p for p in ['LICENSE','NOTICE.md','provenance.json']}
+terms={p:v/p for p in ['LICENSE','NOTICE.md','provenance.json']} if s.get('effect') else {str(p):root/p for p in s.get('notices',[])}
 folder=root/s['folder'];source={**terms,'asset.json':folder/'asset.json','README.md':folder/'README.md'}
 if s.get('effect'):
  source.update({str(p.relative_to(v)):p for p in (v/'src/core').glob('*.js')})
