@@ -10,6 +10,7 @@
     "G09 keyboard and accessibility": "PASS",
     "G08 preview/source/download/catalog failure and recovery": "PASS",
     "G08 invalid metadata isolated": "PASS",
+    "G05 blocked locale storage remains functional": "PASS",
     "G09 touch and narrow layout": "PASS",
     "G07/E01 package → catalog → build → new type/search/inspector": "PASS",
     "Privacy: no runtime external requests": "PASS"

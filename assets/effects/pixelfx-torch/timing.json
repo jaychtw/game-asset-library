@@ -1,6 +1,10 @@
 {
   "schemaVersion": 1,
   "id": "pixelfx-torch",
+  "generator": {
+    "node": "24.22.1",
+    "command": "npm run assets"
+  },
   "image": "sprites.png",
   "origin": {
     "repo": "patch-gg/pixelfx",

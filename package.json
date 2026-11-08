@@ -1,6 +1,11 @@
 {
-  "name": "game-asset-library", "version": "1.0.0", "private": true, "type": "module",
-  "engines": {"node": ">=22"},
+  "name": "game-asset-library",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "24.22.1"
+  },
   "scripts": {
     "catalog": "node scripts/catalog.mjs",
     "assets": "node scripts/render.mjs",
@@ -10,5 +15,8 @@
     "test:browser": "node tests/browser.mjs",
     "serve": "python3 -m http.server 8000 --bind 127.0.0.1 --directory dist"
   },
-  "devDependencies": {"@axe-core/playwright": "4.11.1", "playwright": "1.58.2"}
+  "devDependencies": {
+    "@axe-core/playwright": "4.11.1",
+    "playwright": "1.58.2"
+  }
 }

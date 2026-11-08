@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {readFileSync,existsSync} from 'node:fs';
+import {readFileSync,existsSync,cpSync,rmSync} from 'node:fs';
 import {inflateSync} from 'node:zlib';
 import {execFileSync} from 'node:child_process';
 import {json} from '../scripts/catalog.mjs';
@@ -19,3 +19,5 @@ for p in pathlib.Path('dist/downloads').glob('*.zip'):
   assert not any('gallery/fonts' in f for f in z.namelist())
 `]);});
 test('vetted vendor code has no runtime network/eval and exact source hashes',()=>{const p=json('vendor/pixelfx/provenance.json');for(const [file,hash]of Object.entries(p.files)){const bytes=readFileSync('vendor/pixelfx/'+file);assert.equal(sha(bytes),hash);if(file.startsWith('src/'))assert(!/\b(fetch|eval|XMLHttpRequest|WebSocket)\s*\(|\bimport\s*\(/.test(bytes.toString()),file);}assert(!Object.keys(p.files).some(f=>f.includes('gallery/fonts')));});
+
+test('duplicate package identity is rejected and catalog restored',()=>{const dir='assets/effects/zz-duplicate';try{cpSync('assets/effects/pixelfx-torch',dir,{recursive:true});execFileSync('node',['scripts/catalog.mjs']);assert.throws(()=>validate(),/Duplicate ID/);}finally{rmSync(dir,{recursive:true,force:true});execFileSync('node',['scripts/catalog.mjs']);}validate();});

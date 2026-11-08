@@ -12,7 +12,7 @@ Original battleship manifest, runtime PNG, anchors and README are untouched. Rig
 
 ## Acceptance evidence
 
-Local verification uses Node 24, Python 3.12, Chromium, Playwright 1.58.2 and axe-core 4.11.1. CI repeats the production build, determinism checks, tests and browser acceptance on Node 22. [Browser results](evidence/browser.json) contain actual check outcomes and targeted axe findings; screenshots are from real running renders, not mockups.
+Local verification uses Node 24, Python 3.12, Chromium, Playwright 1.58.2 and axe-core 4.11.1. CI repeats the production build, determinism checks, tests and browser acceptance on the pinned Node **24.22.1** runtime. Exact reproduction requires this version: testing Node 22 exposed a one-channel floating-point difference in an ice frame and different PNG compression bytes. The generator enforces the pin and timing metadata records it; upstream bytes remain unchanged. [Browser results](evidence/browser.json) contain actual check outcomes and targeted axe findings; screenshots are from real running renders, not mockups.
 
 | Scenario | Verified outcome |
 | --- | --- |

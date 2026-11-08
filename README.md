@@ -6,7 +6,7 @@ A small source-first catalog of real working visual components for game developm
 
 ## Develop and verify
 
-Node.js 22+ and Python 3; no production dependencies, API, CDN or server backend. QA dependencies are pinned in package-lock.json.
+Node.js **24.22.1** (see .node-version) and Python 3; no production dependencies, API, CDN or server backend. QA dependencies are pinned in package-lock.json.
 
 ```sh
 npm ci
