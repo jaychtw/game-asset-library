@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 1,
+  "id": "pixelfx-torch",
+  "name": "Torch",
+  "type": "effect",
+  "localized": {
+    "en": {
+      "name": "Torch",
+      "description": "A wall torch on an iron bracket: a licking flame leaping off a pitch-soaked wrap, licks and puffs torn off its tips, smoke, embers, a flickering light on the wall."
+    },
+    "zh-TW": {
+      "name": "火炬",
+      "description": "鐵架上的火炬：火舌、煙霧、餘燼與閃爍的暖光。"
+    }
+  },
+  "description": "A wall torch on an iron bracket: a licking flame leaping off a pitch-soaked wrap, licks and puffs torn off its tips, smoke, embers, a flickering light on the wall.",
+  "tags": {
+    "roles": [
+      "vfx",
+      "fire"
+    ],
+    "styles": [
+      "pixel-art",
+      "procedural"
+    ],
+    "views": [
+      "side"
+    ],
+    "features": [
+      "fire",
+      "torch",
+      "prop",
+      "light",
+      "wall",
+      "dungeon",
+      "loop",
+      "animated",
+      "transparent"
+    ],
+    "formats": [
+      "js",
+      "png",
+      "json"
+    ]
+  },
+  "status": {
+    "creative": "candidate",
+    "integration": "demo-verified",
+    "rights": "verified-open"
+  },
+  "approval": {
+    "scope": "Library v1 technical import; no asset creative freeze",
+    "evidence": "docs/FINAL-GDD.md",
+    "crossProjectApproval": false
+  },
+  "origin": {
+    "repo": "patch-gg/pixelfx",
+    "author": "Patch; Hugo Duprez; third-party contributors per NOTICE",
+    "referenceCommit": "a84159688af3ca37a4be05a0d422b94451b2e24e",
+    "path": "src/fx/fire/torch.js",
+    "editableSourceUrl": "https://github.com/patch-gg/pixelfx/blob/a84159688af3ca37a4be05a0d422b94451b2e24e/src/fx/fire/torch.js"
+  },
+  "rights": {
+    "license": "MIT",
+    "reuse": "Reuse and adapt with MIT copyright/license and applicable NOTICE preserved.",
+    "publicDistribution": true,
+    "notices": [
+      "vendor/pixelfx/LICENSE",
+      "vendor/pixelfx/NOTICE.md"
+    ]
+  },
+  "files": {
+    "runtime": [],
+    "metadata": [
+      "timing.json"
+    ],
+    "preview": null,
+    "exports": [
+      "sprites.png",
+      "timing.json"
+    ]
+  },
+  "capabilities": {
+    "adapter": "pixelfx",
+    "effect": "fire/torch",
+    "preview": true,
+    "sourceDownload": true,
+    "spriteExport": true,
+    "controls": [
+      "play",
+      "replay",
+      "speed",
+      "background",
+      "palette",
+      "seed",
+      "mirror"
+    ]
+  },
+  "integration": {
+    "entryPoint": "vendor/pixelfx/src/fx/fire/torch.js",
+    "framePixels": [
+      72,
+      120
+    ],
+    "pivot": [
+      36,
+      94
+    ],
+    "duration": 2,
+    "fps": 30,
+    "loop": true,
+    "coordinates": "pixels, x right, y down; seconds",
+    "allowed": [
+      "MIT permits modification and reuse with notices"
+    ],
+    "needsReview": [
+      "Creative suitability and target-game integration"
+    ],
+    "instructions": "Import createFx/createFrame/clearFrame/composite from vendor/pixelfx/src/core/index.js and this effect module. createFx(module, {x: 36, y: 94}); update at 1/30 seconds, clearFrame, draw, composite to RGBA. Preserve LICENSE and NOTICE. Pin the library commit; do not auto-update."
+  },
+  "dependencies": [
+    "vendor/pixelfx/provenance.json"
+  ],
+  "limits": [
+    "No independent target-game integration verified",
+    "Default sprite exports do not include preview customizations",
+    "Additive glow is encoded as RGBA; looks most faithful on dark backgrounds"
+  ],
+  "checksums": {
+    "sprites.png": "04bd50e9062f51a050b802826378734668a73337e0db064193e17306411fa0fd",
+    "timing.json": "a2def589802f311da033678235a898f9f75756f636d639933fe5d915df586477",
+    "README.md": "b5ab3fa00e4ae6a36d7a918263b72f5112d6fd8a3404e0e3d6e4d5c06ee30ad5"
+  }
+}

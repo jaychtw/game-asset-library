@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "id": "pixelfx-energy-core",
+  "name": "Energy core",
+  "type": "effect",
+  "localized": {
+    "en": {
+      "name": "Energy core",
+      "description": "A plasma core beating in a steel cage: it swells and throws a shock ring on each beat, two tilted rings orbit it, and arcs jump to the bars and spark."
+    },
+    "zh-TW": {
+      "name": "能量核心",
+      "description": "持續脈動的科幻能量核心與電弧。"
+    }
+  },
+  "description": "A plasma core beating in a steel cage: it swells and throws a shock ring on each beat, two tilted rings orbit it, and arcs jump to the bars and spark.",
+  "tags": {
+    "roles": [
+      "vfx",
+      "scifi"
+    ],
+    "styles": [
+      "pixel-art",
+      "procedural"
+    ],
+    "views": [
+      "side"
+    ],
+    "features": [
+      "scifi",
+      "reactor",
+      "core",
+      "power",
+      "plasma",
+      "machine",
+      "prop",
+      "ground",
+      "loop",
+      "animated",
+      "transparent"
+    ],
+    "formats": [
+      "js",
+      "png",
+      "json"
+    ]
+  },
+  "status": {
+    "creative": "candidate",
+    "integration": "demo-verified",
+    "rights": "verified-open"
+  },
+  "approval": {
+    "scope": "Library v1 technical import; no asset creative freeze",
+    "evidence": "docs/FINAL-GDD.md",
+    "crossProjectApproval": false
+  },
+  "origin": {
+    "repo": "patch-gg/pixelfx",
+    "author": "Patch; Hugo Duprez; third-party contributors per NOTICE",
+    "referenceCommit": "a84159688af3ca37a4be05a0d422b94451b2e24e",
+    "path": "src/fx/scifi/energy-core.js",
+    "editableSourceUrl": "https://github.com/patch-gg/pixelfx/blob/a84159688af3ca37a4be05a0d422b94451b2e24e/src/fx/scifi/energy-core.js"
+  },
+  "rights": {
+    "license": "MIT",
+    "reuse": "Reuse and adapt with MIT copyright/license and applicable NOTICE preserved.",
+    "publicDistribution": true,
+    "notices": [
+      "vendor/pixelfx/LICENSE",
+      "vendor/pixelfx/NOTICE.md"
+    ]
+  },
+  "files": {
+    "runtime": [],
+    "metadata": [
+      "timing.json"
+    ],
+    "preview": null,
+    "exports": [
+      "sprites.png",
+      "timing.json"
+    ]
+  },
+  "capabilities": {
+    "adapter": "pixelfx",
+    "effect": "scifi/energy-core",
+    "preview": true,
+    "sourceDownload": true,
+    "spriteExport": true,
+    "controls": [
+      "play",
+      "replay",
+      "speed",
+      "background",
+      "palette",
+      "seed",
+      "mirror"
+    ]
+  },
+  "integration": {
+    "entryPoint": "vendor/pixelfx/src/fx/scifi/energy-core.js",
+    "framePixels": [
+      112,
+      100
+    ],
+    "pivot": [
+      56,
+      88
+    ],
+    "duration": 2.4,
+    "fps": 30,
+    "loop": true,
+    "coordinates": "pixels, x right, y down; seconds",
+    "allowed": [
+      "MIT permits modification and reuse with notices"
+    ],
+    "needsReview": [
+      "Creative suitability and target-game integration"
+    ],
+    "instructions": "Import createFx/createFrame/clearFrame/composite from vendor/pixelfx/src/core/index.js and this effect module. createFx(module, {x: 56, y: 88}); update at 1/30 seconds, clearFrame, draw, composite to RGBA. Preserve LICENSE and NOTICE. Pin the library commit; do not auto-update."
+  },
+  "dependencies": [
+    "vendor/pixelfx/provenance.json"
+  ],
+  "limits": [
+    "No independent target-game integration verified",
+    "Default sprite exports do not include preview customizations",
+    "Additive glow is encoded as RGBA; looks most faithful on dark backgrounds"
+  ],
+  "checksums": {
+    "sprites.png": "7adeef618a8a5a969971118216d1d514d4236745b32a4fbb50c2584720a7be5e",
+    "timing.json": "b59057a4df2ef5d720830d043376f8ac011fac1c149ac3b1a7336975e554118b",
+    "README.md": "356788530b725f2395c636f7e012ca98520b1ef6f85b9dc16858887366fd7700"
+  }
+}
