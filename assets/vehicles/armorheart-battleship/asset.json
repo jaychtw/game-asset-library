@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "id": "armorheart-battleship",
+  "name": "Armorheart Battleship",
+  "type": "vehicle",
+  "tags": {
+    "roles": [
+      "boss",
+      "enemy"
+    ],
+    "styles": [
+      "stylized",
+      "mixed-raster-vector"
+    ],
+    "views": [
+      "top-down"
+    ],
+    "features": [
+      "transparent",
+      "editable-source-linked",
+      "registered-muzzles"
+    ],
+    "formats": [
+      "png",
+      "svg",
+      "json"
+    ]
+  },
+  "status": {
+    "creative": "accepted-for-origin",
+    "integration": "source-present",
+    "rights": "unverified"
+  },
+  "approval": {
+    "scope": "Armorheart Interception M3 compact hull and three visible single-bore batteries; accepted despite known cosmetic limitations",
+    "evidence": "https://github.com/jaychtw/armorheart/blob/29c5e871f6c7b92599880b60a3666943fa452a74/docs/decisions/M3_IMPLEMENTATION_AUTHORIZATION.md",
+    "crossProjectApproval": false
+  },
+  "origin": {
+    "repo": "jaychtw/armorheart",
+    "referenceCommit": "29c5e871f6c7b92599880b60a3666943fa452a74",
+    "runtimeGitBlob": "74588123b0def70082d12d1628929dd7d3ac9525",
+    "editableGitBlob": "7bf8755692c6877b5a3fbca2aba83758c24a974a",
+    "editableSourceUrl": "https://github.com/jaychtw/armorheart/blob/29c5e871f6c7b92599880b60a3666943fa452a74/planning/interception-m3/art/battleship-editable.svg",
+    "notes": "Editable original is 5.25 MB, with embedded raster sources. Its exact immutable GitHub link is preserved rather than duplicating it in the minimal library package; runtime PNG bytes are copied identically."
+  },
+  "rights": {
+    "license": "Unverified for cross-project redistribution",
+    "reuse": "Origin-project creative approval is not a general reuse grant. Confirm applicable rights and new-project art direction before redistribution or publishing a derivative.",
+    "publicCatalog": "Source image is already public in its origin repo; this owner-controlled copy does not establish third-party licensing."
+  },
+  "files": {
+    "runtime": [
+      "runtime.png"
+    ],
+    "metadata": [
+      "anchors.json"
+    ],
+    "preview": "preview.html",
+    "editableExternal": [
+      "https://github.com/jaychtw/armorheart/blob/29c5e871f6c7b92599880b60a3666943fa452a74/planning/interception-m3/art/battleship-editable.svg"
+    ]
+  },
+  "checksums": {
+    "runtime.png": "d235b9a77e5c303b78d9ee5431944200f78d168937e5bca4c30be4400804d0ca"
+  },
+  "integration": {
+    "framePixels": [
+      664,
+      260
+    ],
+    "bodyWorld": [
+      320,
+      88
+    ],
+    "worldFrame": [
+      -166,
+      -54,
+      332,
+      130
+    ],
+    "muzzles": [
+      [
+        -88,
+        66
+      ],
+      [
+        0,
+        66
+      ],
+      [
+        88,
+        66
+      ]
+    ],
+    "entryPoint": "runtime.png",
+    "allowed": [
+      "Render at game-appropriate scale",
+      "Attach project-specific damage-state effects in a new GDD"
+    ],
+    "needsReview": [
+      "New-project creative use",
+      "New-project licensing and distribution",
+      "Fundamental silhouette and gun arrangement changes"
+    ]
+  },
+  "limits": [
+    "Not yet tested in a different game",
+    "No dynamic animation system in package; original offers an editable composite SVG",
+    "A single accepted visual does not imply user has approved a reusable character-production system"
+  ]
+}

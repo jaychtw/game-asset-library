@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "id": "replace-me",
+  "name": "New reusable asset",
+  "type": "character",
+  "tags": {
+    "roles": [
+      "player"
+    ],
+    "styles": [],
+    "views": [],
+    "features": [],
+    "formats": []
+  },
+  "status": {
+    "creative": "candidate",
+    "integration": "source-present",
+    "rights": "unverified"
+  },
+  "approval": {
+    "scope": "Pending review",
+    "evidence": null,
+    "crossProjectApproval": false
+  },
+  "origin": {
+    "repo": null,
+    "referenceCommit": null,
+    "editableSourceUrl": null
+  },
+  "rights": {
+    "license": "Unverified",
+    "reuse": "No reuse permission inferred"
+  },
+  "files": {
+    "runtime": [],
+    "metadata": [],
+    "preview": null,
+    "editableExternal": []
+  },
+  "checksums": {},
+  "integration": {
+    "entryPoint": null,
+    "allowed": [],
+    "needsReview": []
+  },
+  "limits": []
+}
